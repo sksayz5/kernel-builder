@@ -1,4 +1,4 @@
-name: Kernel_Build_neko
+name: GitHub action kernel builder
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       REPO_URL:
         description: 'REPO_URL'
         required: true
-        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/kernel_xiaomi_lavender-neko'
+        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/kernel_xiaomi_lavender-14'
       DEFAULT_BRANCH:
         description: 'DEFAULT_BRANCH'
         required: true

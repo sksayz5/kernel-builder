@@ -22,7 +22,7 @@ jobs:
     env:
       chat_id: 1278600516
       token: ${{ secrets.TOKEN }}
-      ght: ${{ secrets.GITHUB_TOKEN }}
+      ght: ${{ secrets.GHT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3

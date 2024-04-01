@@ -14,7 +14,7 @@ on:
       BUILD_COMMAND:
         description: 'BUILD_COMMAND'
         required: true
-        default: 'bash build.sh'
+        default: 'bash snx.sh'
 
 jobs:
   build:

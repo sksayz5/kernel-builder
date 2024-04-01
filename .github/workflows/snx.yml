@@ -10,11 +10,11 @@ on:
       DEFAULT_BRANCH:
         description: 'DEFAULT_BRANCH'
         required: true
-        default: 'try'
+        default: 'test'
       BUILD_COMMAND:
         description: 'BUILD_COMMAND'
         required: true
-        default: 'bash scripts/kbuild.sh'
+        default: 'bash build.sh'
 
 jobs:
   build:

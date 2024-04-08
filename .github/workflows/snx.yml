@@ -10,7 +10,7 @@ on:
       DEFAULT_BRANCH:
         description: 'DEFAULT_BRANCH'
         required: true
-        default: 'test'
+        default: 'jaosn'
       BUILD_COMMAND:
         description: 'BUILD_COMMAND'
         required: true

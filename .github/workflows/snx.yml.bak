@@ -6,11 +6,11 @@ on:
       REPO_URL:
         description: 'REPO_URL'
         required: true
-        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/kernel_xiaomi_lavender-udc'
+        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/perf_kernel'
       DEFAULT_BRANCH:
         description: 'DEFAULT_BRANCH'
         required: true
-        default: 'retro'
+        default: 'jaosn'
       BUILD_COMMAND:
         description: 'BUILD_COMMAND'
         required: true

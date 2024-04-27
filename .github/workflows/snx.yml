@@ -14,7 +14,7 @@ on:
       BUILD_COMMAND:
         description: 'BUILD_COMMAND'
         required: true
-        default: 'bash snx.sh'
+        default: 'bash build.sh --qti'
 
 jobs:
   build:

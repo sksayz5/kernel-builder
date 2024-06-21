@@ -35,9 +35,9 @@ jobs:
           git config --global user.name "Sa-Sajjad"
           git config --global user.email "sqsa93103@gmail.com"
           git config --global color.ui false
-          git clone --depth=1 ${{ github.event.inputs.REPO_URL }} -b ${{ github.event.inputs.DEFAULT_BRANCH }} snx && cd snx
+          git clone --depth=1 ${{ github.event.inputs.REPO_URL }} -b ${{ github.event.inputs.DEFAULT_BRANCH }} Snx && cd Snx
           
       - name: COMPILING Kernel
         run: |
-          ${{ github.event.inputs.BUILD_COMMAND }}
+          cd Snx && ${{ github.event.inputs.BUILD_COMMAND }}
           

@@ -11,10 +11,27 @@ on:
         description: 'DEFAULT_BRANCH'
         required: true
         default: 'retro'
+      KERNEL_DEFCONFIG:
+        description: 'KERNEL_DEFCONFIG'
+        required: true
+        default: 'lavender_defconfig'
       BUILD_COMMAND:
         description: 'BUILD_COMMAND'
         required: true
-        default: 'bash build.sh --qti'
+        default: 'bash snx.sh'
+      DEFAULT_CLANG:
+        description: 'Type of Clang:'
+        required: true
+        default: 'aosp'
+        type: choice
+        options: 
+        - 'aosp'
+        - 'proton'
+        - 'neutron'
+        - 'clang-18'
+        - 'eva'
+        - 'arter'
+        - 'nexus'
 
 jobs:
   build:
@@ -30,11 +47,17 @@ jobs:
           submodules: 'recursive'
           fetch-depth: 0
 
-      - name: COMPILING 
+      - name: Cloning Kernel Repo
         run: |
           git config --global user.name "Sa-Sajjad"
           git config --global user.email "sqsa93103@gmail.com"
-          git config --global color.ui false
-          git clone --depth=1 ${{ github.event.inputs.REPO_URL }} -b ${{ github.event.inputs.DEFAULT_BRANCH }} snx && cd snx
+          git config --global color.ui true
+          git clone --depth=1 ${{ github.event.inputs.REPO_URL }} -b ${{ github.event.inputs.DEFAULT_BRANCH }} Snx
+
+      - name: Compilation
+        run: |
+          cd Snx && curl -O https://raw.githubusercontent.com/Sa-Sajjad/kernel-builder/snx/snx.sh
+          echo "COMPILER=${{ github.event.inputs.DEFAULT_CLANG }}" | cat - snx.sh > temp && mv temp snx.sh
+          echo "DEFCONFIG=${{ github.event.inputs.KERNEL_DEFCONFIG }}" | cat - snx.sh > temp && mv temp snx.sh
           ${{ github.event.inputs.BUILD_COMMAND }}
           

@@ -6,7 +6,7 @@ on:
       REPO_URL:
         description: 'REPO_URL'
         required: true
-        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/kernel_xiaomi_lavender-udc'
+        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/kernel_xiaomi_lavender_unitrix'
       DEFAULT_BRANCH:
         description: 'DEFAULT_BRANCH'
         required: true

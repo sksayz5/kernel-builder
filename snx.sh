@@ -8,7 +8,7 @@
 KERNEL_DIR="$(pwd)"
 
 # Zip Name
-ZIPNAME="Nyxion"
+ZIPNAME="Nyxion-RDP-T1"
 
 # Specify compiler ( neutron, eva , clang-18 , proton , arter , aosp & nexus )
 # COMPILER=neutron

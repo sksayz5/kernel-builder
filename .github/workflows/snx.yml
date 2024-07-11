@@ -56,7 +56,7 @@ jobs:
 
       - name: Compilation
         run: |
-          cd Snx && curl -O https://raw.githubusercontent.com/Sa-Sajjad/kernel-builder/snx/snx.sh
+          cd Snx && curl -O https://raw.githubusercontent.com/Sa-Sajjad/kernel-builder/rdp-test/snx.sh
           echo "COMPILER=${{ github.event.inputs.DEFAULT_CLANG }}" | cat - snx.sh > temp && mv temp snx.sh
           echo "DEFCONFIG=${{ github.event.inputs.KERNEL_DEFCONFIG }}" | cat - snx.sh > temp && mv temp snx.sh
           ${{ github.event.inputs.BUILD_COMMAND }}

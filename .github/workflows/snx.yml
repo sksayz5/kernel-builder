@@ -6,15 +6,15 @@ on:
       REPO_URL:
         description: 'REPO_URL'
         required: true
-        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/kernel_xiaomi_lavender-udc'
+        default: 'https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/kernel_xiaomi_lavender'
       DEFAULT_BRANCH:
         description: 'DEFAULT_BRANCH'
         required: true
-        default: 'retro'
+        default: 'lst'
       KERNEL_DEFCONFIG:
         description: 'KERNEL_DEFCONFIG'
         required: true
-        default: 'lavender_defconfig'
+        default: 'lavender-perf_defconfig'
       BUILD_COMMAND:
         description: 'BUILD_COMMAND'
         required: true

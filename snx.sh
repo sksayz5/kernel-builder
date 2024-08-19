@@ -114,8 +114,8 @@ function clone() {
 		elif [ $COMPILER = "aosp" ]; then
 		post_msg " Cloning Aosp Clang 14.0.2 ToolChain "
 		git clone --depth=1 https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r445002.git -b 12.0 aosp-clang
-                git clone https://github.com/sohamxda7/llvm-stable -b gcc64 --depth=1 gcc
-                git clone https://github.com/sohamxda7/llvm-stable -b gcc32  --depth=1 gcc32
+                git clone https://github.com/AOSPA/android_prebuilts_gcc_linux-x86_aarch64_aarch64-elf -b master --depth=1 gcc
+                git clone https://github.com/AOSPA/android_prebuilts_gcc_linux-x86_arm_arm-eabi -b master  --depth=1 gcc32
                 PATH="${KERNEL_DIR}/aosp-clang/bin:${KERNEL_DIR}/gcc/bin:${KERNEL_DIR}/gcc32/bin:${PATH}"
 		elif [ $COMPILER = "arter" ]; then
 		post_msg " Cloning Arter GCC 9.3.0 ToolChain "
